@@ -28,7 +28,7 @@ This tool creates a **malicious ZIP archive** containing a `.lnk` (Windows short
 ## 🚀 Usage
 
 ```bash
-python3 lnk_zip_payload.py <lnk_name> <decoy_url> <file1> [file2 ...] [--persist]
+python3 yazs.py <lnk_name.lnk> <decoy_url> <file1> [file2 ...] [--persist]
 ```
 
 ### Arguments:
