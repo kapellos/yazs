@@ -1,4 +1,4 @@
-# 💣 LNK Payload ZIP Injector
+# 💣 Yet Another Zip Smuggler
 
 This tool creates a **malicious ZIP archive** containing a `.lnk` (Windows shortcut) file and **injects a hidden base64-encoded payload** (tar-archived files) into the middle of the ZIP file before the Central Directory. The `.lnk` can be configured to **execute a decoy URL and extract+run the payload**, or **persist across reboots** by writing to the Windows Startup folder.
 
