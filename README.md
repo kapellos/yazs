@@ -98,3 +98,9 @@ Only use this tool in environments where you have **explicit permission** to tes
 
 MIT License
 
+---
+
+## 🙏 Credits
+
+Inspired by and based on research from [Alex Reid's ZIP Smuggling project](https://github.com/Octoberfest7/zip_smuggling).
+
