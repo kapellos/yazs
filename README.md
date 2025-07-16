@@ -45,7 +45,7 @@ python3 lnk_zip_payload.py <lnk_name> <decoy_url> <file1> [file2 ...] [--persist
 ## 🔍 Example
 
 ```bash
-python3 lnk_zip_payload.py update.lnk https://example.com mypayload.exe helper.dll --persist
+python3 yazs.py update.lnk https://example.com mypayload.exe helper.dll --persist
 ```
 
 This creates:
